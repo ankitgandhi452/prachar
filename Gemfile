@@ -54,3 +54,4 @@ gem 'mongoid', '~> 6.1.0'
 gem 'bson_ext'
 gem 'rails_admin'
 gem "mongoid-paperclip"
+gem 'devise'
