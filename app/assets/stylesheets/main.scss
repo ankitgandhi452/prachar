@@ -19,7 +19,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: $font-heading;
-	margin:10px 0 5px;
+	margin:0 0 10px;
 }
 
 wrapper {
@@ -27,6 +27,7 @@ wrapper {
 	height:100%;
 	white-space:nowrap;
 	overflow:hidden;
+	padding-top:$nav-height;
 
 	&.menu-visible {
 		#left-menu {
@@ -35,6 +36,8 @@ wrapper {
 
 		#main-container {
 			transform:scale(0.85);
+			opacity:0.75;
+			pointer-events:none;
 		}
 
 	}
@@ -82,8 +85,9 @@ top {
 		margin:0;
 		transition:all .5s ease;
 		text-align:center;
+		margin-right:10px;
 
-		&:hover {
+		&:active {
 			background:$color-black-0;
 			color:$color-red;
 		}
@@ -91,19 +95,96 @@ top {
 }
 
 #left-menu {
+	white-space:normal;
 	width:$left-menu-width;
-	margin-left:calc(-#{$left-menu-width} - 5px);
+	margin-left:-#{$left-menu-width};
 	transition:all .5s ease;
-	height:calc(100% - #{$nav-height});
-	margin-top: $nav-height;
+	height:100%;
 	display:inline-block;
+	float:left;
+	position:relative;
+	overflow-x:hidden;
+	overflow-y:auto;
+
+	&.mobile {
+		width: $left-menu-mobile-width;
+		margin-left:-#{$left-menu-mobile-width};
+	}
+
+	.inner-wrap {
+		width:100%;
+		padding:10px;
+
+		.menu-item {
+			padding:10px 0 10px 0;
+			border-bottom:1px solid $color-black-2;
+			margin:0;
+
+			&:last-child {
+				border-bottom:none;
+			}
+
+			span {
+				cursor:pointer;
+				transition:all .5s ease;
+
+				&:hover {
+					color:$color-red;
+				}
+			}
+
+			span.menu-title {
+				cursor:default;
+				pointer-events:none;
+				opacity:0.35;
+
+				&:hover {
+					color:inherit;
+				}
+			}
+
+			.submenu {
+				padding:5px 0 5px 15px;
+
+				.menu-item {
+					margin:0;
+					padding:10px 0 0;
+					border-bottom:none;
+				}
+			}
+		}
+
+		footerlink {
+			display:block;
+			opacity:0.25;
+			margin-top:20px;
+			text-align:center;
+			font-size:0.9em;
+
+			social_icons {
+				font-size:1.3em;
+				display:block;
+
+				.fa {
+					margin:0 3px;
+					cursor:pointer;
+					transition:all .5s ease;
+
+					&:hover {
+						color:$color-red;
+					}
+				}
+			}
+		}
+	}
 }
 
 #main-container {
 	width:100%;
-	margin-top:$nav-height;
-	min-height:calc(100% - #{$nav-height});
+	min-height:100%;
 	background:$color-white-1;
 	transition:all .5s ease;
 	display:inline-block;
+	padding:10px;
+	transform:scale(1);
 }
