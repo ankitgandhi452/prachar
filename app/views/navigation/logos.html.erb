@@ -1,0 +1,19 @@
+<% mobile_video_count=3 %>
+<% desktop_video_count=6 %>
+<h2 class="page-header"><%= @logo.title %></h2>
+<div id="logo-container" class="row no-margin">
+	<% @logo_images.each do |logo_image|%>
+		<div class='col-xs-<%= 12/mobile_video_count %> col-sm-<%= 12/mobile_video_count %> col-md-<%= 12/desktop_video_count %> col-lg-<%= 12/desktop_video_count %> logo-item'>
+			<div class="logo-item-image">
+				<a href="<%= logo_image.image %>" class="lightbox-item">
+					<div class="inner">
+						<img src="<%= logo_image.image %>" />
+						<div class="logo-item-hover">
+							<i class="fa fa-eye"></i>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	<% end %>
+</div>

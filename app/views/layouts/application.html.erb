@@ -14,8 +14,8 @@
 				<menu id="menu">
 					<i class="fa fa-bars"></i>
 				</menu>
-				<div class="logo">
-					<div class="image_protect"></div>
+				<div class="logo img-protected">
+					<div class="img-protector"></div>
 					<img src="http://idealand.co.in/prachar/wp-content/uploads/2017/02/Prachar_logo.png" />
 				</div>
 			</top>
@@ -94,12 +94,22 @@
 			<div class="container-fluid ps-scrollable" id="main-container">
 				<%= yield %>
 			</div>
+
+			<div id="imagelightbox-container">
+				<div id="imagelightbox-inner"></div>
+			</div>
 		</wrapper>
 		<script>
 			$(function() {
 				$("#year").text(new Date().getFullYear());
 
 				$('.ps-scrollable').perfectScrollbar();
+
+				$('.lightbox-item').imageLightbox({
+					onStart: function() { $('#imagelightbox-container').velocity('stop',true).velocity('fadeIn', 250); },
+					onEnd: function() { $('#imagelightbox-container').velocity('stop',true).velocity('fadeOut', 250); },
+					onLoadEnd: function() { $('#imagelightbox').appendTo('#imagelightbox-inner').velocity('stop',true); }
+				});
 
 				$(window).on('resize', function(e) {
 					$('.ps-scrollable').perfectScrollbar('update');

@@ -1,10 +1,15 @@
 class NavigationController < ApplicationController
 	# before_filter :set_page_title
 	def home
-		
+
 	end
 
-	def tvc
+	def logos
+		@logo = Logo.last
+		@logo_images = @logo.logo_images
+	end
+
+	def tvcs
 		@tvc = Tvc.last
 		@tvc_videos = @tvc.tvc_videos
 	end
@@ -16,6 +21,6 @@ class NavigationController < ApplicationController
 
 	# private
 	# def set_page_title
-		# @title = 
+		# @title =
 	# end
 end

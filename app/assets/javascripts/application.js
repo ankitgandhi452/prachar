@@ -17,6 +17,8 @@
 //= require velocity.min
 //= require velocity.ui.min
 
+//= require imagelightbox.min.js
+
 //= require mobvious-rails
 //= require turbolinks
 //= require cable.js
