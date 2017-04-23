@@ -3,9 +3,10 @@
 <h2 class="page-header"><%= @tvc.title %></h2>
 <div id="tvc-container" class="row no-margin">
 	<% @tvc_videos.each do |tvc_video|%>
-		<div class='col-xs-<%= 12/mobile_video_count %> col-sm-<%= 12/mobile_video_count %> col-md-<%= 12/desktop_video_count %> col-lg-<%= 12/desktop_video_count %> video-item %>'>
-			<div class="video-item-image" video-src="<%= tvc_video.url %>" style="background-image: url(<%= tvc_video.image %>);"></div>
-			<div class="video-item-caption"><%= tvc_video.caption %></div>
+		<div class='col-xs-<%= 12/mobile_video_count %> col-sm-<%= 12/mobile_video_count %> col-md-<%= 12/desktop_video_count %> col-lg-<%= 12/desktop_video_count %> video-item'>
+			<div class="video-item-image" video-src="<%= tvc_video.url %>" style="background-image: url(<%= tvc_video.image %>);">
+			</div>
+			<div class="video-item-caption"><i class="fa fa-play"></i><%= tvc_video.caption %></div>
 		</div>
 	<% end %>
 </div>
