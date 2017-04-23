@@ -1,0 +1,62 @@
+#career-container {
+	position: relative;
+	height: 100%;
+	width: 100%;
+
+
+	#content {
+		width: 100%;
+ 		white-space: pre-wrap;
+ 		margin-bottom:20px;
+ 		padding:0 30px;
+	}
+
+	.panel-group {
+		padding: 0 10px;
+		color: #111;
+
+		.panel.panel-default {
+
+			.panel-heading {
+				background-color: rgba(1,1,1,0.9);
+    			border-color: #000;
+    			color: #fff;
+			}
+
+			.opening-description {
+				margin-bottom: 5px; 
+			}
+		}
+	}
+
+	.overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		padding: 10% 0 0 0;
+		background: rgba(1,1,1,0.8);
+		overflow-y: auto; 
+		overflow-x: hidden; 
+
+		&.hide{
+			display: none;
+		}
+
+		.close-overlay {
+			position: absolute;
+			top: 0px;
+			right: 10px;
+			font-size: 2em;
+		}
+		.ps-form-element-container {
+			margin-bottom: 5px;
+
+		}
+		.ps-form-input {
+			width: 100%;
+		}
+
+	}
+}
