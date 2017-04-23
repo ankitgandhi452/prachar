@@ -1,0 +1,27 @@
+<h2 class="page-header"><%= @digital_media.title %></h2>
+<div id="digital-media">
+	<div class="content">
+		<%= @digital_media.header.strip %>
+	</div>
+	<div class="row no-margin digital-media" id="grid" data-columns>
+		<% @digital_media_images.each do |digital_media_image| %>
+				<div class="digital-media-image">
+					<a href="<%= digital_media_image.image %>" class="lightbox-item">
+						<img src="<%= digital_media_image.image %>" class="loaded--false" />
+						<div class="digital-media-hover">
+							<i class="fa fa-eye"></i>
+						</div>
+					</a>
+				</div>
+		<% end %>
+	</div>
+</div>
+<script>
+	$(function() {
+		salvattore.init();
+
+		$(window).load(function() {
+			$('img').toggleClass('loaded--false loaded--true');
+		});
+	});
+</script>
