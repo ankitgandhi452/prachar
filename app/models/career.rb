@@ -3,6 +3,7 @@ class Career
 	include Mongoid::Timestamps
 
 	field :title, type: String
-	field :openings, type: Array
+	field :content, type: String
 
+	has_many :openings
 end
