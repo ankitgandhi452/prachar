@@ -15,7 +15,7 @@
 					<i class="fa fa-bars"></i>
 				</menu>
 				<div class="logo img-protected">
-					<div class="img-protector"></div>
+					<a href="<%= home_path %>" class="img-protector"></a>
 					<img src="http://idealand.co.in/prachar/wp-content/uploads/2017/02/Prachar_logo.png" />
 				</div>
 			</top>
@@ -24,9 +24,11 @@
 					<h4 class="menu-item">
 						<span class="menu-title">Services</span>
 						<div class="submenu">
-							<h5 class="menu-item">
-								<span>Media</span>
-							</h5>
+							<a href="<%= media_path %>" class="linker">
+								<h5 class="menu-item">
+									<span>Media</span>
+								</h5>
+							</a>
 							<h5 class="menu-item">
 								<span>Creative</span>
 							</h5>
@@ -47,15 +49,19 @@
 					<h4 class="menu-item">
 						<span class="menu-title">Our Work</span>
 						<div class="submenu">
-							<h5 class="menu-item">
-								<span>Logos</span>
-							</h5>
+							<a href="<%= logos_path %>" class="linker">
+								<h5 class="menu-item">
+									<span>Logos</span>
+								</h5>
+							</a>
 							<h5 class="menu-item">
 								<span>Collaterals</span>
 							</h5>
-							<h5 class="menu-item">
-								<span>TVCs</span>
-							</h5>
+							<a href="<%= tvcs_path %>" class="linker">
+								<h5 class="menu-item">
+									<span>TVCs</span>
+								</h5>
+							</a>
 							<h5 class="menu-item">
 								<span>Print Ads</span>
 							</h5>
@@ -67,15 +73,21 @@
 					<h4 class="menu-item">
 						<span class="menu-title">More</span>
 						<div class="submenu">
-							<h5 class="menu-item">
-								<span>About</span>
-							</h5>
-							<h5 class="menu-item">
-								<span>Careers</span>
-							</h5>
-							<h5 class="menu-item">
-								<span>Contact</span>
-							</h5>
+							<a href="<%= about_path %>" class="linker">
+								<h5 class="menu-item">
+									<span>About</span>
+								</h5>
+							</a>
+							<a href="<%= career_path %>" class="linker">
+								<h5 class="menu-item">
+									<span>Careers</span>
+								</h5>
+							</a>
+							<a href="<%= contact_us_path %>" class="linker">
+								<h5 class="menu-item">
+									<span>Contact</span>
+								</h5>
+							</a>
 						</div>
 					</h4>
 

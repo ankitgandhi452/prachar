@@ -1,0 +1,43 @@
+#media-container {
+
+	#header-image {
+		width: 100%;
+		margin-bottom:20px;
+
+		img {
+			width:100%;
+			height:auto;
+		}
+	}
+
+	#content {
+		width: 100%;
+ 		white-space: pre-wrap;
+ 		margin-bottom:20px;
+ 		padding:0 30px;
+	}
+
+	.sub-header {
+		color:$color-red;
+	}
+
+	#team-member-container {
+		display: flex;
+		flex-wrap: wrap;
+
+		.team-member {
+			padding: 10px;
+			margin:0 auto;
+			margin-bottom:5px;
+
+			.name {
+				font-size:1.3em;
+				font-weight:bold;
+			}
+
+			.designation {
+				opacity:0.65;
+			}
+		}
+	}
+}

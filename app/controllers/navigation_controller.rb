@@ -53,6 +53,11 @@ class NavigationController < ApplicationController
 		
 	end
 
+	def media
+		@media = MediaPage.last
+		@media_images = @media.media_images
+	end
+
 	private
 	def navigation_params
 
