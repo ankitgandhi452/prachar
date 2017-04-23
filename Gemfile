@@ -57,3 +57,5 @@ gem "mongoid-paperclip"
 gem 'devise'
 gem "autoprefixer-rails"
 gem "twitter-bootstrap-rails"
+gem 'mobvious'
+gem 'mobvious-rails'
