@@ -5,6 +5,6 @@ class PrintAd
 	field :title, type: String
 	field :content, type: String
 
-	has_many :print_ads
+	has_many :print_ad_images
 
 end
