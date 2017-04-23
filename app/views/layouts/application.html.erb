@@ -1,21 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Prachar</title>
-    <%= csrf_meta_tags %>
+	<head>
+		<title>Prachar</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<%= csrf_meta_tags %>
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+	</head>
+	<body>
+		<wrapper class="menu-hidden">
+			<top>
+				<menu id="menu">
+					Menu
+				</menu>
+				<div class="logo">
+					<div class="image_protect"></div>
+					<img src="http://idealand.co.in/prachar/wp-content/uploads/2017/02/Prachar_logo.png" />
+				</div>
+			</top>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+			<div id="left-menu">
+				this is the left menu
+			</div>
 
-  <body>
-  	<nav>
-		<logo>
-
-		</logo>
-  	</nav>
-  	<div class="container-fluid" id="main-container">
-    	<%= yield %>
-  	</div>
-  </body>
+			<div class="container-fluid" id="main-container">
+					<%= yield %>
+			</div>
+		</wrapper>
+		<script>
+			$("#menu").unbind('click').on('click', function(e) {
+				$('wrapper').toggleClass('menu-hidden menu-visible');
+			});
+		</script>
+	</body>
 </html>
