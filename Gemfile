@@ -55,3 +55,5 @@ gem 'bson_ext'
 gem 'rails_admin'
 gem "mongoid-paperclip"
 gem 'devise'
+gem "autoprefixer-rails"
+gem "twitter-bootstrap-rails"
