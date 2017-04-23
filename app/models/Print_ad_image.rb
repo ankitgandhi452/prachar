@@ -1,12 +1,12 @@
-class LogoImage
+class PrintAdImage
 	include Mongoid::Document
 	include Mongoid::Timestamps
 	include Mongoid::Paperclip
 
-	field :sequence, type: Integer, default: ->{LogoImage.count}
+	field :sequence, type: Integer, default: ->{PrintAdImage.count}
 	field :caption, type: String
 	has_mongoid_attached_file :image
 	validates_attachment_content_type :image, content_type: /\Aimage/
 
-	belongs_to :logo
+	belongs_to :print_ad
 end
