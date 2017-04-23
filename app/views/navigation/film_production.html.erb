@@ -1,0 +1,13 @@
+<div id="film-production-container">
+	<h2 class="page-header"><%= @film_production.title %></h2>
+	<div class="row no-margin">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding">
+			<div id="header-image" class="img-protected">
+				<img src="<%= @film_production_images[0].image rescue nil %>" />
+				<div class="img-protector"></div>
+			</div>
+		</div>
+	</div>
+	<div id="content"><%= @film_production.content %></div>
+</div>
+

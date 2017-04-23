@@ -73,6 +73,16 @@ class NavigationController < ApplicationController
 		@media_images = @media.media_images.order("ASC sequence")
 	end
 
+	def creative
+		@creative = Creative.last
+		@creative_images = @creative.creative_images.order("ASC sequence")
+	end
+
+	def film_production
+		@film_production = FilmProduction.last
+		@film_production_images = @film_production.film_production_images.order("ASC sequence")
+	end
+
 	private
 	def navigation_params
 

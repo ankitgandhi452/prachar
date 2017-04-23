@@ -10,7 +10,9 @@ Rails.application.routes.draw do
   end
 
   scope '/services' do
-  	get '/media' => 'navigation#media', as: :media, constraints: { format: 'html' }
+    get '/media' => 'navigation#media', as: :media, constraints: { format: 'html' }
+    get '/creative' => 'navigation#creative', as: :creative, constraints: { format: 'html' }
+  	get '/film_production' => 'navigation#film_production', as: :film_production, constraints: { format: 'html' }
   	get '/celebrity_management' => 'navigation#celebrity_management', as: :celebrity_management, constraints: { format: 'html' }
   end
 
