@@ -1,0 +1,20 @@
+<div id="about-us-container">
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+			<div id="header-image" style='background-image: url(<%= @about.header_image %>)'></div>
+		</div>
+	</div>
+	<h2 class="page-header"><%= @about.title %></h2>
+	<div id="content"><%= @about.content %></div>
+	<h3 class="text-center sub-header">Meet The Team</h3>
+	<div id="team-member-container" class="row">
+		<% @team_members.each do |member| %>
+			<div class="col-xs-6 col-sm-6 col-xs-6 col-md-3 col-lg-3 text-center team-member">
+				<div><%= member.name %></div>
+				<div><%= member.designation %></div>
+			</div>
+		<% end %>
+	</div>
+
+</div>
+
