@@ -12,15 +12,83 @@
 		<wrapper class="menu-hidden">
 			<top>
 				<menu id="menu">
-					Menu
+					<i class="fa fa-bars"></i>
 				</menu>
 				<div class="logo">
 					<div class="image_protect"></div>
 					<img src="http://idealand.co.in/prachar/wp-content/uploads/2017/02/Prachar_logo.png" />
 				</div>
 			</top>
-			<div id="left-menu">
-				this is the left menu
+			<div id="left-menu" class="<%= device_type %>">
+				<div class="inner-wrap">
+					<h4 class="menu-item">
+						<span class="menu-title">Services</span>
+						<div class="submenu">
+							<h5 class="menu-item">
+								<span>Media</span>
+							</h5>
+							<h5 class="menu-item">
+								<span>Creative</span>
+							</h5>
+							<h5 class="menu-item">
+								<span>Film Production</span>
+							</h5>
+							<h5 class="menu-item">
+								<span>Celebrity Management</span>
+							</h5>
+						</div>
+					</h4>
+					<h4 class="menu-item">
+						<span>Clients</span>
+					</h4>
+					<h4 class="menu-item">
+						<span>Success Stories</span>
+					</h4>
+					<h4 class="menu-item">
+						<span class="menu-title">Our Work</span>
+						<div class="submenu">
+							<h5 class="menu-item">
+								<span>Logos</span>
+							</h5>
+							<h5 class="menu-item">
+								<span>Collaterals</span>
+							</h5>
+							<h5 class="menu-item">
+								<span>TVCs</span>
+							</h5>
+							<h5 class="menu-item">
+								<span>Print Ads</span>
+							</h5>
+						</div>
+					</h4>
+					<h4 class="menu-item">
+						<span>Digital Media</span>
+					</h4>
+					<h4 class="menu-item">
+						<span class="menu-title">More</span>
+						<div class="submenu">
+							<h5 class="menu-item">
+								<span>About</span>
+							</h5>
+							<h5 class="menu-item">
+								<span>Careers</span>
+							</h5>
+							<h5 class="menu-item">
+								<span>Contact</span>
+							</h5>
+						</div>
+					</h4>
+
+					<footerlink>
+						Copyright &copy; <span id="year"></span> Prachar. All Rights Reserved.
+						<social_icons>
+							<i class="fa fa-facebook"></i>
+							<i class="fa fa-twitter"></i>
+							<i class="fa fa-instagram"></i>
+							<i class="fa fa-youtube"></i>
+						</social_icons>
+					</footerlink>
+				</div>
 			</div>
 
 			<div class="container-fluid" id="main-container">
@@ -28,6 +96,8 @@
 			</div>
 		</wrapper>
 		<script>
+			$("#year").text(new Date().getFullYear());
+
 			$("#menu").unbind('click').on('click', function(e) {
 				$('wrapper').toggleClass('menu-hidden menu-visible');
 			});
