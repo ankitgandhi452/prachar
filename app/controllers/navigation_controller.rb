@@ -30,6 +30,11 @@ class NavigationController < ApplicationController
 		@celebrities = @celebrity_management.celebrity_management_images
 	end
 
+	def digital_media
+		@digital_media = DigitalMedium.last
+		@digital_media_images = @digital_media.digital_media_images
+	end
+
 	def about_us
 		@about = AboutUs.last
 		@team_members = TeamMember.all
