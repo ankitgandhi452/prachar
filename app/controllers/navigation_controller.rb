@@ -21,8 +21,8 @@ class NavigationController < ApplicationController
 	end
 
 	def print_ads
-		@print_ad = PrintAd.last
-		@print_ad_images = @print_ad.print_ad_images
+		@print_ad = Print.last
+		@print_ad_images = @print_ad.print_images
 	end
 
 	def celebrity_management
