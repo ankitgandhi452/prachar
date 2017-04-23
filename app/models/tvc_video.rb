@@ -3,7 +3,7 @@ class TvcVideo
 	include Mongoid::Timestamps
 	include Mongoid::Paperclip
 
-	field :sequence, type: Integer, default: ->{ClientImage.count}
+	field :sequence, type: Integer, default: ->{TvcVideo.count}
 	has_mongoid_attached_file :image
 	validates_attachment_content_type :image, content_type: /\Aimage/
 	field :url, type: String
