@@ -15,5 +15,6 @@
 //= require twitter/bootstrap
 //= require velocity.min
 //= require velocity.ui.min
+//= require mobvious-rails
 //= require turbolinks
 //= require_tree .
