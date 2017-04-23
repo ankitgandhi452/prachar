@@ -1,0 +1,12 @@
+@font-face {
+	font-family: 'News Cycle';
+	src: url('../../assets/news_cycle_regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Josefin Sans';
+	src: url('../../assets/josefin_sans_light.ttf') format('truetype');
+}
+
+$font-body: 'News Cycle', sans-serif;
+$font-heading: 'Josefin Sans', sans-serif;
