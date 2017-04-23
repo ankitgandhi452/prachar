@@ -1,4 +1,4 @@
-class CelebrityManagment
+class CelebrityManagement
 	include Mongoid::Document
 	include Mongoid::Timestamps
 
@@ -6,5 +6,4 @@ class CelebrityManagment
 	field :content, type: String
 
 	has_many :celebrity_management_images
-
 end
