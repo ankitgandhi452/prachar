@@ -1,10 +1,68 @@
-
 #print-ads {
-	.print-ad {
-		width:100%;
 
-		img {
-			width:100%;
+	.print-ads {
+		.col {
+			padding:0;
+
+			.print-ad {
+				width:100%;
+				border:2px solid transparent;
+				position:relative;
+				overflow:hidden;
+
+				img {
+					width:100%;
+					transition:all .5s ease;
+					opacity:0;
+
+					&.loaded--true {
+						opacity:1;
+					}
+				}
+
+				&:hover {
+					.print-ad-img-hover {
+						opacity:1;
+						transform:scale(1);
+					}
+				}
+
+				.print-ad-img-hover {
+					background:$color-red-alpha;
+					display:flex;
+					align-items:center;
+					position:absolute;
+					top:0;
+					left:0;
+					width:100%;
+					height:100%;
+					overflow:hidden;
+					transform:scale(2);
+					opacity:0;
+					transition:all .5s ease;
+
+					&:hover {
+						i.fa {
+							box-shadow:0 0 10px 400px $color-white-alpha;
+							transform:scale(1);
+							opacity:1;
+						}
+					}
+
+					i.fa {
+						margin:0 auto;
+						font-size:35px;
+						color:$color-white-0;
+						padding:10px;
+						background:transparent;
+						border-radius:$global-border-radius;
+						box-shadow:0 0 10px 400px transparent;
+						transform:scale(0);
+						opacity:0;
+						transition:all .5s ease;
+					}
+				}
+			}
 		}
 	}
 }
