@@ -1,0 +1,17 @@
+<h2 class="page-header"><%= @collateral.title %></h2>
+<div id="collaterals">
+	<div class="row no-margin">
+		<% @collateral_images.each do |collateral_image| %>
+			<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 collateral">
+				<a href="<%= collateral_image.image %>" class="lightbox-item">
+					<div class="collateral-image" style="background-image:url(<%= collateral_image.image %>)">
+						<img src="<%= collateral_image.image %>" style="display:none;" />
+						<div class="collateral-hover">
+							<i class="fa fa-eye"></i>
+						</div>
+					</div>
+				</a>
+			</div>
+		<% end %>
+	</div>
+</div>
