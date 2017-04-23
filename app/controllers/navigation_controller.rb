@@ -19,6 +19,11 @@ class NavigationController < ApplicationController
 		@tvc_videos = @tvc.tvc_videos
 	end
 
+	def print_ads
+		@print_ad = PrintAd.last
+		@print_ad_images = @print_ad.print_ads
+	end
+
 	def celebrity_management
 		@celebrity_management = CelebrityManagement.last
 		@celebrities = @celebrity_management.celebrity_management_images

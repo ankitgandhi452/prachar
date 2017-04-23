@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   	get '/logos' => 'navigation#logos', as: :logos, constraints: { format: 'html' }
     get '/collaterals' => 'navigation#collaterals', as: :collaterals, constraints: { format: 'html' }
     get '/tvcs' => 'navigation#tvcs', as: :tvcs, constraints: { format: 'html' }
+    get '/print_ads' => 'navigation#print_ads', as: :print_ads, constraints: { format: 'html' }
   end
 
   scope '/services' do
