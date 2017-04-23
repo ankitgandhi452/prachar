@@ -70,7 +70,7 @@ class NavigationController < ApplicationController
 
 	def media
 		@media = MediaPage.last
-		@media_images = @media.media_images
+		@media_images = @media.media_images.order("ASC sequence")
 	end
 
 	private
