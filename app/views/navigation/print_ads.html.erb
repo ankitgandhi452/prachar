@@ -1,0 +1,22 @@
+<h2 class="page-header"><%= @print_ad.title %></h2>
+<div id="print-ads">
+	<div class="row no-margin print-ads" id="grid" data-columns>
+		<% @print_ad_images.each do |print_ad_image| %>
+			<div class="print-ad">
+				<a href="<%= print_ad_image.image %>" class="lightbox-item">
+					<img src="<%= print_ad_image.image %>" class="loaded--false" />
+				</a>
+			</div>
+		<% end %>
+	</div>
+</div>
+<script>
+	$(function() {
+		salvattore.init();
+
+
+		$(window).load(function() {
+			$('img').toggleClass('loaded--false loaded--true');
+		});
+	});
+</script>
