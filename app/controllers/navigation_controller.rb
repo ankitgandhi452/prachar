@@ -88,6 +88,11 @@ class NavigationController < ApplicationController
 		@film_production_images = @film_production.film_production_images.order("ASC sequence")
 	end
 
+	def success_stories
+		@success_stories = SuccessStory.last
+		@stories = @success_stories.stories.order("ASC sequence")
+	end
+
 	private
 	def navigation_params
 

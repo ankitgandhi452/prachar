@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   get '/about_us' => 'navigation#about_us', as: :about, constraints: { format: 'html' }
   get '/contact_us' => 'navigation#contact_us', as: :contact_us, constraints: { format: 'html' }
   get '/career' => 'navigation#career', as: :career, constraints: { format: 'html' }
+  get '/success_stories' => 'navigation#success_stories', as: :success_stories, constraints: { format: 'html' }
   post '/job_application' => 'navigation#apply', as: :job_applications, constraints: { format: 'json' }
   post '/contact' => 'navigation#contacted', as: :contacteds, constraints: { format: 'json' }
   get '/' => 'navigation#home', as: :home, constraints: { format: 'html' }

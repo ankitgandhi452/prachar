@@ -1,0 +1,40 @@
+#success-stories-container {
+	
+	#stories{
+		padding: 0 10px;
+
+		.story {
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			padding: 5px 0;
+
+			&.odd {
+				flex-direction: row-reverse;
+			}
+
+			.image-container {
+				text-align: center;
+			}
+
+			.story-header {
+				text-align: center;
+			}
+
+			.content-container {
+				padding: 5px 0;
+			}
+
+			img {
+				width: 100%;
+				max-width: 460px;
+			}
+			.content {
+				width: 100%;
+		 		white-space: pre-wrap;
+		 		margin-bottom:20px;
+		 		padding:0 30px;
+			}
+		}
+	}
+}
