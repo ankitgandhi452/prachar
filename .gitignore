@@ -16,7 +16,8 @@
 # Ignore Byebug command history file.
 .byebug_history
 
-Gemfile.lock
+/Gemfile.lock
 
 
-*/.DS_Store
+/*/.DS_Store
+/public/
