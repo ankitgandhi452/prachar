@@ -1,0 +1,17 @@
+<div id="success-stories-container">
+	<h2 class="page-header"><%= @success_stories.title %></h2>
+
+	<div id="stories">
+		<% @stories.each_with_index do |story, index| %>
+			<div class="row <%= ((index % 2) == 0) ? 'even' : 'odd' %> story">
+				<div class="col-sm-12 col-xs-12 col-md-6 col-lg-6 image-container"><img src="<%= story.image %>" alt="<%= index %>"></div>
+				<div class="col-sm-12 col-xs-12 col-md-6 col-lg-6 content-container">
+					<h4 class="story-header"> <%= story.header %> </h4>
+					<div class="content"><%= story.content %></div>
+				</div>
+			</div>
+		<% end %>
+	</div>
+
+</div>
+
