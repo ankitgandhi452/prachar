@@ -18,6 +18,7 @@
 //= require velocity.ui.min
 
 //= require imagelightbox.min.js
+//= require salvattore.min.js
 
 //= require mobvious-rails
 //= require turbolinks
