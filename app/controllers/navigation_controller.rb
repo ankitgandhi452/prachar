@@ -22,7 +22,7 @@ class NavigationController < ApplicationController
 
 	def print_ads
 		@print_ad = PrintAd.last
-		@print_ad_images = @print_ad.print_ads
+		@print_ad_images = @print_ad.print_ad_images
 	end
 
 	def celebrity_management
@@ -49,12 +49,12 @@ class NavigationController < ApplicationController
 				format.html{
 					flash[:notice] = 'Successfully Applied'
 					redirect_to(:back)
-				} 
+				}
 			else
 				format.html{
 					flash[:notice] = 'Unsuccessfully Applied'
 					redirect_to(:back)
-				} 
+				}
 			end
 		end
 	end
@@ -65,7 +65,7 @@ class NavigationController < ApplicationController
 	end
 
 	def contacted
-		
+
 	end
 
 	def media
@@ -82,7 +82,7 @@ class NavigationController < ApplicationController
         params.fetch(:contacted, {}).permit(:name, :email, :subject, :description, :message)
       else
       end
-          
+
       # params.fetch(:library_course, {}).permit(:name, :description, :sector, :private, :published, :owner_id, :category, :type, course_images_attributes: [:caption, :subcaption, :image] ) if params[:library_course]
       # params.fetch(:modularized_course, {}).permit(:name, :description, :sector, :private, :published, :owner_id, :category, :type, course_images_attributes: [:caption, :subcaption, :image] ) if params[:modularized_course]
     end
