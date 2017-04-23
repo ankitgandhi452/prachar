@@ -1,13 +1,6 @@
+<h2 class="page-header"><%= @media.title %></h2>
 <div id="media-container">
-	<h2 class="page-header"><%= @media.title %></h2>
-	<div class="row no-margin">
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding">
-			<div id="header-image" class="img-protected">
-				<img src="<%= @media_images[0].image rescue nil %>" />
-				<div class="img-protector"></div>
-			</div>
-		</div>
-	</div>
+	<div id="header-image" class="banner" style="background-image:url(<%= @media_images[0].image rescue nil %>)"></div>
 	<div id="content"><%= @media.content %></div>
 </div>
 
