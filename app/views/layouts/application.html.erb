@@ -19,7 +19,7 @@
 					<img src="http://idealand.co.in/prachar/wp-content/uploads/2017/02/Prachar_logo.png" />
 				</div>
 			</top>
-			<div id="left-menu" class="<%= device_type %>">
+			<div id="left-menu" class="<%= device_type %> ps-scrollable">
 				<div class="inner-wrap">
 					<h4 class="menu-item">
 						<span class="menu-title">Services</span>
@@ -91,16 +91,20 @@
 				</div>
 			</div>
 
-			<div class="container-fluid" id="main-container">
-					<%= yield %>
+			<div class="container-fluid ps-scrollable" id="main-container">
+				<%= yield %>
 			</div>
 		</wrapper>
 		<script>
-			$("#year").text(new Date().getFullYear());
+			$(function() {
+				$("#year").text(new Date().getFullYear());
 
-			$("#menu").unbind('click').on('click', function(e) {
-				$('wrapper').toggleClass('menu-hidden menu-visible');
-			});
+				$('.ps-scrollable').perfectScrollbar();
+
+				$("#menu").unbind('click').on('click', function(e) {
+					$('wrapper').toggleClass('menu-hidden menu-visible');
+				});
+			})
 		</script>
 	</body>
 </html>
