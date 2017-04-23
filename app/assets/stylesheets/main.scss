@@ -73,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
 		transform:translateY(100%);
 		padding:5px;
 		border-radius:$global-border-radius;
-		background:$color-black-3;
+		background:$color-black-0;
 		text-align:center;
 		font-size:10px;
 		white-space:pre-wrap;
@@ -141,11 +141,17 @@ top {
 	}
 
 	menu {
-		display:inline-block;
+		display:flex;
+		align-items:center;
+		justify-content:center;
 		padding:0;
 		padding:10px;
-		background:$color-red;
-		border-radius:$global-border-radius;
+		background:$color-black-0;
+		border-radius:50%;
+		border:1px solid $color-black-3;
+		color:$color-white-3;
+		width:45px;
+		height:45px;
 		cursor:pointer;
 		margin:0;
 		transition:all .5s ease;
@@ -153,8 +159,9 @@ top {
 		margin-right:10px;
 
 		&:active {
-			background:$color-black-0;
-			color:$color-red;
+			background:$color-red;
+			color:$color-white-0;
+			border:1px solid $color-red;
 		}
 	}
 }
