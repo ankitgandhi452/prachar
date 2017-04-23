@@ -12,6 +12,10 @@
  *
  *= require bootstrap_and_overrides.css
  *= require font-awesome.min.css
+ *= require perfect-scrollbar.min.css
+
  *= require main.scss
+
+
  *= require_self
  */

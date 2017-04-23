@@ -13,8 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
+
 //= require velocity.min
 //= require velocity.ui.min
+
 //= require mobvious-rails
 //= require turbolinks
-//= require_tree .
+//= require cable.js
+
+//= require perfect-scrollbar.jquery.min.js
