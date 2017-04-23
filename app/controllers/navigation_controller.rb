@@ -10,9 +10,24 @@ class NavigationController < ApplicationController
 		@logo_images = @logo.logo_images.order("ASC sequence")
 	end
 
+	def collaterals
+		@collateral = Collateral.last
+		@collateral_images = @collateral.collateral_images
+	end
+
 	def tvcs
 		@tvc = Tvc.last
 		@tvc_videos = @tvc.tvc_videos.order("ASC sequence")
+	end
+
+	def print_ads
+		@print_ad = PrintAd.last
+		@print_ad_images = @print_ad.print_ads
+	end
+
+	def celebrity_management
+		@celebrity_management = CelebrityManagement.last
+		@celebrities = @celebrity_management.celebrity_management_images
 	end
 
 	def about_us

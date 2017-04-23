@@ -1,0 +1,26 @@
+<h2 class="page-header"><%= @celebrity_management.title %></h2>
+<div id="celebrity-management">
+	<div class="row content no-margin">
+		<%= @celebrity_management.content %>
+	</div>
+	<div class="row no-margin celebrities" id="grid" data-columns>
+		<% @celebrities.each do |celebrity| %>
+			<div class="celebrity">
+				<a href="<%= celebrity.image %>" class="lightbox-item">
+					<img src="<%= celebrity.image %>" class="loaded--false" />
+					<span class="celebrity-name"><%= celebrity.caption %></span>
+				</a>
+			</div>
+		<% end %>
+	</div>
+</div>
+<script>
+	$(function() {
+		salvattore.init();
+
+
+		$(window).load(function() {
+			$('img').toggleClass('loaded--false loaded--true');
+		});
+	});
+</script>

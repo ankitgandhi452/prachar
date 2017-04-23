@@ -2,9 +2,15 @@
 @import './sass_utils/colors';
 @import './sass_utils/fonts';
 @import './sass_utils/helpers';
+@import './sass_utils/masonry_struct';
 
-@import './sass_partials/tvc';
 @import './sass_partials/logos';
+@import './sass_partials/collateral';
+@import './sass_partials/tvc';
+@import './sass_partials/print_ads';
+
+@import './sass_partials/celebrity_management';
+
 @import './sass_partials/about_us';
 @import './sass_partials/career';
 @import './sass_partials/media';
@@ -46,9 +52,16 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+a.lightbox-item {
+	&:link &:active, &:visited, &:hover {
+		color:inherit;
+		text-decoration:none;
+	}
+}
+
 #imagelightbox-container {
 	position:fixed;
-	z-index:998;
+	z-index:10001;
 	background:rgba(1,1,1,0.75);
 	top:0;
 	left:0;
@@ -62,24 +75,16 @@ h1, h2, h3, h4, h5, h6 {
 	top:50%;
 	left:50%;
 	transform:translate(-50%,-50%);
-	z-index:999;
-	min-width:256px;
-	min-height:256px;
+	z-index:1002;
+}
 
-	&:after {
-		content:'Use ← and → arrows to navigate or swipe to browse.';
-		position:absolute;
-		bottom:-5px;
-		display:block;
-		width:100%;
-		transform:translateY(100%);
-		padding:5px;
-		border-radius:$global-border-radius;
-		background:$color-black-0;
-		text-align:center;
-		font-size:10px;
-		white-space:pre-wrap;
-	}
+#imagelightbox-instructions {
+	position:fixed;
+	bottom:10px;
+	left:50%;
+	transform:translateX(-50%);
+	max-width:400px;
+	text-shadow:0 2px $color-black-0;
 }
 
 #imagelightbox {
@@ -136,7 +141,7 @@ top {
 	padding:10px;
 	display:flex;
 	align-items:center;
-	z-index:1001;
+	z-index:999;
 
 	.logo {
 		position:relative;

@@ -3,13 +3,17 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   scope '/work'do
-    get '/tvcs' => 'navigation#tvcs', as: :tvcs, constraints: { format: 'html' }
     get '/logos' => 'navigation#logos', as: :logos, constraints: { format: 'html' }
+    get '/collaterals' => 'navigation#collaterals', as: :collaterals, constraints: { format: 'html' }
+    get '/tvcs' => 'navigation#tvcs', as: :tvcs, constraints: { format: 'html' }
+    get '/print_ads' => 'navigation#print_ads', as: :print_ads, constraints: { format: 'html' }
   end
 
-  scope 'service' do 
+  scope '/services' do
   	get '/media' => 'navigation#media', as: :media, constraints: { format: 'html' }
+  	get '/celebrity_management' => 'navigation#celebrity_management', as: :celebrity_management, constraints: { format: 'html' }
   end
+
   get '/about_us' => 'navigation#about_us', as: :about, constraints: { format: 'html' }
   get '/contact_us' => 'navigation#contact_us', as: :contact_us, constraints: { format: 'html' }
   get '/career' => 'navigation#career', as: :career, constraints: { format: 'html' }
