@@ -1,15 +1,21 @@
 <div id="home-container" class="">
 	<h2 class="page-header"><%= @home.title %></h2>
-	<div id="banner-images-container" class="">
+	<div id="banner-images-container-portrait" class="portrait-container carousel">
 		<% @banner_images.each do |image| %>
-			<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 text-center l">
-				<div class="name"><img src="<%= image.image %>" alt="0"></div>
-			</div>
 			<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 text-center p">
-				<div class="name"><img src="<%= image.portrait_image %>" alt="0"></div>
+				<img src="<%= image.portrait_image %>" alt="0">
 			</div>
+			
 		<% end %>
 	</div>
+	<div id="banner-images-container-landscape" class="landscape-container carousel">
+		<% @banner_images.each do |image| %>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center l full-height list-l" style="background-image: url(<%= image.image %>)">
+			</div>
+			
+		<% end %>
+	</div>
+
 </div>
 
 <script type="text/javascript" charset="utf-8" async defer>
@@ -27,7 +33,18 @@
       }
     }
 	$(function(){
-		setOrientation("<%= @device %>")
-	})
+		setOrientation("<%= @device %>");
+			$("#banner-images-container-portrait, #banner-images-container-landscape").slick({
+				// lazyLoad: 'ondemand',
+				infinite: true,
+				speed: 300,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				autoplay: true,
+				autoplaySpeed: 3000,
+				arrows: false
+			});
+		})
+	// $(document).on('turbolinks:load', $('.slick-slider').eq(0).slick({})); 
+	// $(document).on('turbolinks:before-cache', $('.slick-slider').eq(0).slick('unslick'));
 </script>
-

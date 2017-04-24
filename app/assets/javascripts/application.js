@@ -20,6 +20,8 @@
 //= require imagelightbox.min.js
 //= require salvattore.min.js
 
+//= require jquery.slick
+
 //= require mobvious-rails
 //= require turbolinks
 //= require cable.js

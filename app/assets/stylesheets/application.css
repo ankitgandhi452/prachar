@@ -14,6 +14,9 @@
  *= require font-awesome.min.css
  *= require perfect-scrollbar.min.css
 
+ *= require slick
+ *= require slick-theme
+
  *= require main.scss
 
 

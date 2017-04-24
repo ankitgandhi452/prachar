@@ -59,3 +59,4 @@ gem "autoprefixer-rails"
 gem "twitter-bootstrap-rails"
 gem 'mobvious'
 gem 'mobvious-rails'
+gem "jquery-slick-rails"

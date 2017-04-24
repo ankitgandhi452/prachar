@@ -1,0 +1,58 @@
+#home-container {
+	width: 100%;
+	height: 100%;
+	overflow-y: hidden;
+
+	.carousel {
+		height: calc(100% - 50px);
+		max-height: calc(100% - 50px);
+		width: 100%;
+
+		.slick-list {
+			height: 100%;
+
+			.slick-track {
+				height: 100%;
+
+				.list-l {
+					background-size: contain;
+					background-repeat: no-repeat;
+					background-position: center;
+				}
+			}
+		}
+	}
+
+	#banner-images-container-portrait {
+		img {
+			width: 100%;
+		}
+	}
+
+	.lanscape-each{
+		height: 100%;
+		padding-left: 75%;
+		margin-left: 12.5%;
+	}
+
+	#banner-images-container-landscape {
+		img {
+			height: 100%;
+		}
+	}
+
+
+	&.landscape {
+		
+		.portrait-container {
+				display: none;
+		}
+	}
+
+	&.portrait {
+
+		.landscape-container {
+			display: none;
+		}
+	}
+}
