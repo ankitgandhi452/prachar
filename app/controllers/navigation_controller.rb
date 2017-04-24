@@ -2,7 +2,8 @@ class NavigationController < ApplicationController
 	# before_filter :set_page_title
 	skip_before_filter :verify_authenticity_token, :only => [:apply]
 	def home
-
+		@home = Home.last
+		@banner_images = @home.home_images.order("ASC sequence")
 	end
 
 	def logos
