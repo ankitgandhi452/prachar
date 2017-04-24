@@ -136,6 +136,10 @@
 					$('.ps-scrollable').perfectScrollbar('update');
 				});
 
+				$('.linker').on('click', function(e) {
+					$('wrapper').removeClass('menu-visible').addClass('menu-visible');
+				});
+
 				$("#menu").unbind('click').on('click', function(e) {
 					$('wrapper').toggleClass('menu-hidden menu-visible');
 				});
