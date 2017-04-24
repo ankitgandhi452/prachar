@@ -6,7 +6,7 @@
 
 	#content {
 		width: 100%;
- 		white-space: pre-wrap;
+ 		white-space: pre-line;
  		margin-bottom:20px;
  		padding:0 30px;
 	}
@@ -24,7 +24,7 @@
 			}
 
 			.opening-description {
-				margin-bottom: 5px; 
+				margin-bottom: 5px;
 			}
 		}
 	}
@@ -37,8 +37,8 @@
 		width: 100%;
 		padding: 10% 0 0 0;
 		background: rgba(1,1,1,0.8);
-		overflow-y: auto; 
-		overflow-x: hidden; 
+		overflow-y: auto;
+		overflow-x: hidden;
 
 		&.hide{
 			display: none;
