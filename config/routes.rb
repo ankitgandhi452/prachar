@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   	get '/celebrity_management' => 'navigation#celebrity_management', as: :celebrity_management, constraints: { format: 'html' }
   end
 
+  get '/clients' => 'navigation#clients', as: :clients, constraints: { format: 'html' }
   get '/digital_media' => 'navigation#digital_media', as: :digital_media, constraints: { format: 'html' }
   get '/about_us' => 'navigation#about_us', as: :about, constraints: { format: 'html' }
   get '/contact_us' => 'navigation#contact_us', as: :contact_us, constraints: { format: 'html' }

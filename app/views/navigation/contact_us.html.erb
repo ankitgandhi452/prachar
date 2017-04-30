@@ -2,45 +2,23 @@
   <h2 class="page-header"><%= @contact_us.title %></h2>
   <div id="content"><%= @contact_us.address %></div>
 
-    <div class="row">
-      <div class="full-height ps-form col-xs-12 col-sm-10 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
-      <%= form_for(@contacted, :remote => true, :data => {:type => :json}) do |f| %>
-        <%#= form_for(@job_application, :remote => true, :html => {:class =>"full-height ps-form", :"data-type" => "json", :multipart => true} ) do |f| %>
-          <div class="form-inline ps-form-element-container">
-            <div class="form-group full-width">
-                <%= f.label :name, :class => "form-label ps-form-label col-xs-12 col-sm-12 col-md-2 col-lg-2",  :value => "Name: " %>
-                <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
-                  <%= f.text_field :name, :maxlength =>50, :class => "form-control ps-form-input full-width",:placeholder => "Enter Your Name",  value: "", :autocomplete => "off", :required => true %>
-                </div>
-            </div>
+    <div class="row no-margin ps-form">
+      <div class="col-xs-12 col-sm-8  col-md-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+        <%= form_for(@contacted, :remote => true, :data => {:type => :json}) do |f| %>
+          <div class="ps-row">
+            <%= f.text_field :name, :maxlength =>50, :class => "ps-form-input",:placeholder => "Name",  value: "", :autocomplete => "off", :required => true %>
           </div>
-          <div class="form-inline ps-form-element-container">
-            <div class="form-group full-width">
-                <%= f.label :email, :class => "form-label ps-form-label col-xs-12 col-sm-12 col-md-2 col-lg-2",  :value => "Email: " %>
-                <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
-                  <%= f.text_field :email, :maxlength =>50, :class => "form-control ps-form-input full-width",:placeholder => "Enter Your Valid Email Address",  value: "", :autocomplete => "off", :required => true %>
-                </div>
-            </div>
+          <div class="ps-row">
+            <%= f.text_field :email, :maxlength =>50, :class => "ps-form-input",:placeholder => "Email",  value: "", :autocomplete => "off", :required => true %>
           </div>
-          <div class="form-inline ps-form-element-container">
-            <div class="form-group full-width">
-                <%= f.label :subject, :class => "form-label ps-form-label col-xs-12 col-sm-12 col-md-2 col-lg-2",  :value => "Subject: " %>
-                <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
-                  <%= f.text_field :subject, :maxlength =>50, :class => "form-control ps-form-input full-width",:placeholder => "Enter Subject",  value: "", :autocomplete => "off", :required => true %>
-                </div>
-            </div>
+          <div class="ps-row">
+            <%= f.text_field :subject, :maxlength =>50, :class => "ps-form-input",:placeholder => "Subject",  value: "", :autocomplete => "off", :required => true %>
           </div>
-          <div class="form-inline ps-form-element-container">
-            <div class="form-group full-width">
-                <%= f.label :message, :class => "form-label ps-form-label col-xs-12 col-sm-12 col-md-2 col-lg-2",  :value => "Message: " %>
-                <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
-                  <%= f.text_area :message, :maxlength =>50, :class => "form-control ps-form-input full-width",:placeholder => "Enter Message",  value: "", :autocomplete => "off", :required => true %>
-                </div>
-            </div>
+          <div class="ps-row">
+            <%= f.text_area :message, :maxlength =>50, :class => "ps-form-input",:placeholder => "Message",  value: "", :autocomplete => "off", :required => true %>
           </div>
-
-          <div class="actions form-group">
-            <%= f.submit "Apply", :class => "btn btn-success malign-right"%>
+          <div class="ps-row">
+            <%= f.submit "Submit", :class => "submit-btn pull-right"%>
           </div>
         <% end %>
       </div>

@@ -1,0 +1,27 @@
+.ps-form {
+	.ps-row {
+		display:block;
+		padding:5px;
+
+		.ps-form-input {
+			width:100%;
+			padding:10px;
+			background:$color-black-2;
+			color:$color-white-0;
+			border:0;
+			resize:none;
+
+			&:focus {
+				outline:none;
+			}
+		}
+
+		.submit-btn {
+			background:$color-red;
+			color:$color-white-0;
+			padding:10px 15px;
+			border-radius:$global-border-radius;
+			border:0;
+		}
+	}
+}

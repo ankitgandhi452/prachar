@@ -3,15 +3,16 @@
 @import './sass_utils/fonts';
 @import './sass_utils/helpers';
 @import './sass_utils/masonry_struct';
+@import './sass_utils/form';
 
+@import './sass_partials/clients';
 @import './sass_partials/logos';
 @import './sass_partials/collateral';
 @import './sass_partials/tvc';
 @import './sass_partials/print_ads';
-
 @import './sass_partials/celebrity_management';
-
 @import './sass_partials/about_us';
+@import './sass_partials/contact_us';
 @import './sass_partials/career';
 @import './sass_partials/media';
 @import './sass_partials/creative';
@@ -183,6 +184,74 @@ top {
 			background:$color-red;
 			color:$color-white-0;
 			border:1px solid $color-red;
+		}
+	}
+
+	nav {
+		margin-left:auto;
+		padding:0 10px;
+
+		navitem.dropdown.open {
+			.dropdown-toggle {
+				background:$color-red;
+				color:$color-white-0;
+			}
+		}
+
+		.nav-item {
+			cursor:pointer;
+			padding:10px;
+			transition:all .5s ease;
+			border-radius:3px;
+			margin-right:5px;
+
+			&.active {
+				color:$color-red;
+			}
+
+			&:last-child {
+				margin-right:0;
+			}
+
+			&:hover {
+				background:$color-red;
+				color:$color-white-0;
+			}
+		}
+
+		ul.dropdown-menu {
+			background:$color-black-3;
+			margin-top:15px;
+			padding:0;
+			overflow:hidden;
+
+			li {
+				cursor:pointer;
+				transition:all .5s ease;
+
+				a {
+					padding:10px;
+				}
+
+				&:hover {
+					background:$color-red;
+					color:$color-white-0;
+
+					a {
+						background:transparent;
+						color:$color-white-0;
+					}
+				}
+			}
+		}
+
+		a {
+			color:$color-white-0;
+
+			&:active, &:link, &:visited, &:hover {
+				text-decoration:none;
+				color:$color-white-0;
+			}
 		}
 	}
 }

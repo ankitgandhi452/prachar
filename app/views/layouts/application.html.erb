@@ -11,111 +11,162 @@
 	<body>
 		<wrapper class="menu-hidden">
 			<top>
-				<menu id="menu">
-					<i class="fa fa-bars"></i>
-				</menu>
+
+				<% if device_type=="mobile" %>
+					<menu id="menu">
+						<i class="fa fa-bars"></i>
+					</menu>
+				<% end %>
+
 				<div class="logo img-protected">
 					<a href="<%= home_path %>" class="img-protector"></a>
 					<img src="http://idealand.co.in/prachar/wp-content/uploads/2017/02/Prachar_logo.png" />
 				</div>
-			</top>
-			<div id="left-menu" class="<%= device_type %> ps-scrollable">
-				<div class="inner-wrap">
-					<h4 class="menu-item">
-						<span class="menu-title">Services</span>
-						<div class="submenu">
-							<a href="<%= media_path %>" class="linker">
-								<h5 class="menu-item">
-									<span>Media</span>
-								</h5>
-							</a>
-							<a href="<%= creative_path %>" class="linker">
-								<h5 class="menu-item">
-									<span>Creative</span>
-								</h5>
-							</a>
-							<a href="<%= film_production_path %>" class="linker">
-								<h5 class="menu-item">
-									<span>Film Production</span>
-								</h5>
-							</a>
-							<a href="<%= celebrity_management_path %>" class="linker">
-								<h5 class="menu-item">
-									<span>Celebrity Management</span>
-								</h5>
-							</a>
-						</div>
-					</h4>
-					<h4 class="menu-item">
-						<span>Clients</span>
-					</h4>
-					<a href="<%= success_stories_path %>" class="linker">
-						<h4 class="menu-item">
-							<span>Success Stories</span>
-						</h4>
-					</a>
-					<h4 class="menu-item">
-						<span class="menu-title">Our Work</span>
-						<div class="submenu">
-							<a href="<%= logos_path %>" class="linker">
-								<h5 class="menu-item">
-									<span>Logos</span>
-								</h5>
-							</a>
-							<a href="<%= collaterals_path %>" class="linker">
-								<h5 class="menu-item">
-									<span>Collaterals</span>
-								</h5>
-							</a>
-							<a href="<%= tvcs_path %>" class="linker">
-								<h5 class="menu-item">
-									<span>TVCs</span>
-								</h5>
-							</a>
-							<a href="<%= print_ads_path %>" class="linker">
-								<h5 class="menu-item">
-									<span>Print Ads</span>
-								</h5>
-							</a>
-						</div>
-					</h4>
-					<a href="<%= digital_media_path %>" class="linker">
-						<h4 class="menu-item">
-							<span>Digital Media</span>
-						</h4>
-					</a>
-					<h4 class="menu-item">
-						<span class="menu-title">More</span>
-						<div class="submenu">
-							<a href="<%= about_path %>" class="linker">
-								<h5 class="menu-item">
-									<span>About</span>
-								</h5>
-							</a>
-							<a href="<%= career_path %>" class="linker">
-								<h5 class="menu-item">
-									<span>Careers</span>
-								</h5>
-							</a>
-							<a href="<%= contact_us_path %>" class="linker">
-								<h5 class="menu-item">
-									<span>Contact</span>
-								</h5>
-							</a>
-						</div>
-					</h4>
 
-					<footerlink>
-						Copyright &copy; <span id="year"></span> Prachar. All Rights Reserved.
-						<social_icons>
-							<i class="fa fa-facebook"></i>
-							<i class="fa fa-twitter"></i>
-							<i class="fa fa-instagram"></i>
-							<i class="fa fa-youtube"></i>
-						</social_icons>
-					</footerlink>
+				<% if device_type!="mobile" %>
+					<nav>
+						<navitem class="dropdown">
+							<a class="dropdown-toggle nav-item" data-toggle="dropdown">Services <i class="fa fa-caret-down"></i></a>
+							<ul class="dropdown-menu nav-dropdown">
+								<li><a href="<%= media_path %>">Media</a></li>
+								<li><a href="<%= creative_path %>">Creative</a></li>
+								<li><a href="<%= film_production_path %>">Film Production</a></li>
+								<li><a href="<%= celebrity_management_path %>">Celebrity Management</a></li>
+							</ul>
+						</navitem>
+						<navitem>
+							<a href="<%= clients_path %>" class="nav-item">Clients</a>
+						</navitem>
+						<navitem>
+							<a href="<%= success_stories_path %>" class="nav-item">Success Stories</a>
+						</navitem>
+						<navitem class="dropdown">
+							<a class="dropdown-toggle nav-item" data-toggle="dropdown">Our Work <i class="fa fa-caret-down"></i></a>
+							<ul class="dropdown-menu nav-dropdown">
+								<li><a href="<%= logos_path %>">Logos</a></li>
+								<li><a href="<%= collaterals_path %>">Collaterals</a></li>
+								<li><a href="<%= tvcs_path %>">TVCs</a></li>
+								<li><a href="<%= print_ads_path %>">Print Media</a></li>
+							</ul>
+						</navitem>
+						<navitem>
+							<a href="<%= digital_media_path %>" class="nav-item">Digital Media</a>
+						</navitem>
+						<navitem>
+							<a href="<%= career_path %>" class="nav-item">Careers</a>
+						</navitem>
+						<navitem>
+							<a href="<%= about_path %>" class="nav-item">About</a>
+						</navitem>
+						<navitem>
+							<a href="<%= contact_us_path %>" class="nav-item">Contact</a>
+						</navitem>
+					</nav>
+				<% end %>
+
+			</top>
+
+			<% if device_type == "mobile" %>
+				<div id="left-menu" class="<%= device_type %> ps-scrollable">
+					<div class="inner-wrap">
+						<h4 class="menu-item">
+							<span class="menu-title">Services</span>
+							<div class="submenu">
+								<a href="<%= media_path %>" class="linker">
+									<h5 class="menu-item">
+										<span>Media</span>
+									</h5>
+								</a>
+								<a href="<%= creative_path %>" class="linker">
+									<h5 class="menu-item">
+										<span>Creative</span>
+									</h5>
+								</a>
+								<a href="<%= film_production_path %>" class="linker">
+									<h5 class="menu-item">
+										<span>Film Production</span>
+									</h5>
+								</a>
+								<a href="<%= celebrity_management_path %>" class="linker">
+									<h5 class="menu-item">
+										<span>Celebrity Management</span>
+									</h5>
+								</a>
+							</div>
+						</h4>
+						<a href="<%= clients_path %>" class="linker">
+							<h4 class="menu-item">
+								<span>Clients</span>
+							</h4>
+						</a>
+						<a href="<%= success_stories_path %>" class="linker">
+							<h4 class="menu-item">
+								<span>Success Stories</span>
+							</h4>
+						</a>
+						<h4 class="menu-item">
+							<span class="menu-title">Our Work</span>
+							<div class="submenu">
+								<a href="<%= logos_path %>" class="linker">
+									<h5 class="menu-item">
+										<span>Logos</span>
+									</h5>
+								</a>
+								<a href="<%= collaterals_path %>" class="linker">
+									<h5 class="menu-item">
+										<span>Collaterals</span>
+									</h5>
+								</a>
+								<a href="<%= tvcs_path %>" class="linker">
+									<h5 class="menu-item">
+										<span>TVCs</span>
+									</h5>
+								</a>
+								<a href="<%= print_ads_path %>" class="linker">
+									<h5 class="menu-item">
+										<span>Print Ads</span>
+									</h5>
+								</a>
+							</div>
+						</h4>
+						<a href="<%= digital_media_path %>" class="linker">
+							<h4 class="menu-item">
+								<span>Digital Media</span>
+							</h4>
+						</a>
+						<h4 class="menu-item">
+							<span class="menu-title">More</span>
+							<div class="submenu">
+								<a href="<%= about_path %>" class="linker">
+									<h5 class="menu-item">
+										<span>About</span>
+									</h5>
+								</a>
+								<a href="<%= career_path %>" class="linker">
+									<h5 class="menu-item">
+										<span>Careers</span>
+									</h5>
+								</a>
+								<a href="<%= contact_us_path %>" class="linker">
+									<h5 class="menu-item">
+										<span>Contact</span>
+									</h5>
+								</a>
+							</div>
+						</h4>
+
+						<footerlink>
+							Copyright &copy; <span id="year"></span> Prachar. All Rights Reserved.
+							<social_icons>
+								<i class="fa fa-facebook"></i>
+								<i class="fa fa-twitter"></i>
+								<i class="fa fa-instagram"></i>
+								<i class="fa fa-youtube"></i>
+							</social_icons>
+						</footerlink>
+					</div>
 				</div>
-			</div>
+			<% end %>
 
 			<div class="container-fluid ps-scrollable" id="main-container">
 				<%= yield %>

@@ -1,0 +1,19 @@
+<% mobile_video_count=3 %>
+<% desktop_video_count=6 %>
+<h2 class="page-header"><%= @client.title %></h2>
+<div id="client-container" class="row no-margin">
+	<% @client_images.each do |client_image|%>
+		<div class='col-xs-<%= 12/mobile_video_count %> col-sm-<%= 12/mobile_video_count %> col-md-<%= 12/desktop_video_count %> col-lg-<%= 12/desktop_video_count %> client-item'>
+			<div class="client-item-image">
+				<a href="<%= client_image.image %>" class="lightbox-item">
+					<div class="inner">
+						<img src="<%= client_image.image %>" />
+						<div class="client-item-hover">
+							<i class="fa fa-eye"></i>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	<% end %>
+</div>

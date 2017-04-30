@@ -6,6 +6,11 @@ class NavigationController < ApplicationController
 		@banner_images = @home.home_images.order("ASC sequence")
 	end
 
+	def clients
+		@client = Client.last
+		@client_images = @client.client_images.order("ASC sequence")
+	end
+
 	def logos
 		@logo = Logo.last
 		@logo_images = @logo.logo_images.order("ASC sequence")
